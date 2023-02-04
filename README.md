@@ -68,7 +68,7 @@ join payment_methods as pm
 	on p.payment_method = pm.payment_method_id
 ```
 # Outer join
-	# Left join
+# Left join
 ```
 SELECT 
     c.customer_id,
@@ -81,4 +81,13 @@ order by c.customer_id
 
 (Returns all the fields from left table)
 ```
-	# Right join
+# Using clause
+```
+SELECT o.order_id, c.first_name
+from orders as o
+join customers as c
+	using (customer_id)
+join shippers sh
+	using (shipper_id)
+```
+
