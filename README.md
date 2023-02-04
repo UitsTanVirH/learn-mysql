@@ -51,3 +51,19 @@ from orders as o
 join customers as c
 	on o.customer_id = c.customer_id
 ```
+# Self join
+```
+SELECT e.employee_id, e.first_name, e.last_name, em.first_name as Manager
+from employees e
+join employees em
+	on e.reports_to = em.employee_id
+```
+# Joining mulitiple table
+```
+SELECT p.date, c.client_id as Client_Id, c.name as Client, p.amount, pm.name as Method
+from clients as c
+join payments as p
+	on c.client_id = p.client_id
+join payment_methods as pm 
+	on p.payment_method = pm.payment_method_id
+```
