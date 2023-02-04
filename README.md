@@ -31,3 +31,15 @@ SELECT *
 FROM sql_store.orders
 where shipper_id is null
 ```
+# Limit clause
+```
+SELECT * 
+FROM sql_store.customers
+limit 5
+
+SELECT * 
+FROM sql_store.customers
+limit 5, 3 
+(5 is offset here, skips the first 5 rows and shows after that)
+```
+
