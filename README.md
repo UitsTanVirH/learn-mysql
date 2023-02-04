@@ -25,4 +25,9 @@ where last_name like '_____y'
 '%' any number of characters,
 '_' single characters
 ```
-
+# Null operator
+```
+SELECT * 
+FROM sql_store.orders
+where shipper_id is null
+```
