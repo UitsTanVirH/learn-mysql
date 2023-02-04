@@ -22,6 +22,7 @@ SELECT *
 FROM sql_store.customers
 where last_name like '_____y'
 
-'%' all match,
-'_' single match
+'%' any number of characters,
+'_' single characters
 ```
+
