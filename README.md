@@ -89,5 +89,6 @@ join customers as c
 	using (customer_id)
 join shippers sh
 	using (shipper_id)
+	
+(Only works when the column names are same)
 ```
-
