@@ -67,3 +67,18 @@ join payments as p
 join payment_methods as pm 
 	on p.payment_method = pm.payment_method_id
 ```
+# Outer join
+	# Left join
+```
+SELECT 
+    c.customer_id,
+    c.first_name,
+    o.order_id
+from customers as c
+left join orders as o
+    on c.customer_id = o.customer_id
+order by c.customer_id
+
+(Returns all the fields from left table)
+```
+	# Right join
